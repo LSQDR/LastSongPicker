@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="body-container">
+            <header class="container">
+                <img src="./images/L4ST SongPicker.png" alt="Logo titled Last song picker">
+                <h1>What genre are we feeling?</h1>
+            </header>
+            <main class="container main-container">
+                <button class="btn" id="surprise-me">Surprise Me</button>
+                <div class="controls-container container">
+                    <div class="genre-radios" id="genre-radios">
+                        <div class="radio">
+                            <label for="pop">Pop</label>
+                            <input type="radio" id="pop" value="pop" name="genres">
+                        </div>
+                         <div class="radio">
+                            <label for="pop">Pop</label>
+                            <input type="radio" id="pop" value="pop" name="genres">
+                        </div>
+                         <div class="radio">
+                            <label for="pop">Pop</label>
+                            <input type="radio" id="pop" value="pop" name="genres">
+                        </div>
+                         <div class="radio">
+                            <label for="pop">Pop</label>
+                            <input type="radio" id="pop" value="pop" name="genres">
+                        </div>
+                         <div class="radio">
+                            <label for="pop">Pop</label>
+                            <input type="radio" id="pop" value="pop" name="genres">
+                        </div>
+                        
+                    </div>
+                    <div class="indie-opt">
+                        <label for="indie-only-opt" class="indie-check-label">Exclude mainstream song</label>
+                        <input type="checkbox" id="indie-only-opt">
+                    </div>
+                    <button class="get-song-btn btn container" id="get-song-btn">Get Song</button>
+                </div>
+            </main>
+            <div class="song-modal container hidden" id="song-modal">
+                <button class="modal-close-btn" id="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Song of choice!</h2>
+                <div class="container" id="song-modal-inner">
+                    <p>Seal a Dime by Cruel Santino</p>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/track/3rkJKWEcv8wvOOKRCSsaM7?utm_source=generator&theme=0" 
+                        width="360" height="220" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                        clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
