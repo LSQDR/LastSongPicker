@@ -30,6 +30,7 @@ function renderSong(func){
  `
     songModal.style.display = 'flex'
     indieOnlyOption.parentElement.classList.add('hidden')
+    indieOnlyOption.checked = false
     getSongBtn.classList.add('hidden')
 
     renderGenreRadios(songData)
@@ -84,7 +85,6 @@ function closeModal(){
     indieOnlyOption.parentElement.classList.remove('hidden')
     getSongBtn.classList.remove('hidden')
     songModalInner.innerHTML = ""
-    console.log("bruh")
 }
 
 function getGenresArray(songs) {
