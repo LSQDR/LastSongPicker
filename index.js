@@ -11,12 +11,18 @@ const closeModalBtn = document.getElementById("modal-close-btn")
 
 closeModalBtn.addEventListener("click", closeModal)
 
-getSongBtn.addEventListener("click", renderSong)
+getSongBtn.addEventListener("click", function(){
+    const song = getSingleSongObject()
+    renderSong(song)
+})
 
-// surpriseMeBtn.addEventListener("click", renderSong)
+surpriseMeBtn.addEventListener("click", function(){
+    const song = getRandomSongObject()
+    renderSong(song)
+})
 
-function renderSong(){
- const songObject = getSingleSongObject()
+function renderSong(func){
+ const songObject = func
  songModalInner.innerHTML = `
     <p class="song-details">Title: ${songObject.title}</p>
     <p class="song-details">Artists: ${songObject.artist}</p>
@@ -25,6 +31,8 @@ function renderSong(){
     songModal.style.display = 'flex'
     indieOnlyOption.parentElement.classList.add('hidden')
     getSongBtn.classList.add('hidden')
+
+    renderGenreRadios(songData)
 }
 
 function getSingleSongObject(){
@@ -59,6 +67,17 @@ function getMatchingSongsArray(){
     
 }
 
+function getRandomSongObject(){
+    let allSongsArray = []
+    
+    for (let song of songData){
+        allSongsArray.push(song)
+
+    }
+    const randomNumber = Math.floor(Math.random() * allSongsArray.length)
+    return allSongsArray[randomNumber]
+
+}
 
 function closeModal(){
     songModal.style.display = 'none'
