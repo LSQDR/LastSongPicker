@@ -204,6 +204,14 @@ input[type="checkbox"]:checked{
 
     }
 
+    h2 {
+        margin: 0 0 16px 0;
+    }
+
+    .song-details{
+        padding: 8px 16px;
+        line-height: 1.4;
+    }
     header img {
         width: 220px;
         margin-bottom: 16px;
@@ -245,10 +253,18 @@ input[type="checkbox"]:checked{
     }
     .song-modal {
         width: 300px;
+        top: 170px;
     }
+    .modal-close-btn {
+        height: 25px;
+        width: 25px;
+        margin: 10px 10px 0 0;
+    }
+
+
     iframe {
         width: 280px;
-        height: 150px;
+        height: 100px;
     }
     .radio {
         padding: 8px 16px;
